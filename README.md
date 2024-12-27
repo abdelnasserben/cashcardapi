@@ -1,12 +1,17 @@
 
-## Application **Cash Card**  
+## API **Cash Card**  
 
-Bienvenue dans le projet **Cash Card**, une solution pour simplifier la gestion des allocations familiales. Cette application utilise **Spring Boot** pour offrir une API RESTful sécurisée et performante, avec une conception robuste et des fonctionnalités bien pensées.  
+Bienvenue dans le projet **Cash Card**, une solution pour simplifier la gestion des allocations familiales. Cette application utilise **Spring Boot** pour offrir une API RESTful sécurisée et performante, avec une conception robuste et des fonctionnalités bien pensées. 
+
+---
+
 
 ### **Présentation**  
 Le **Cash Card** permet aux parents de gérer facilement les fonds destinés à leurs enfants, en remplaçant l'argent liquide par des "cash cards" virtuelles. Ces cartes fonctionnent de manière similaire à des cartes cadeaux et permettent de :  
 - Envoyer, recevoir et suivre les fonds alloués.  
 - Contrôler les transactions à tout moment.  
+
+---
 
 #### **Architecture et conception**  
 L'application a été développée en suivant une approche incrémentale et orientée projet :  
@@ -27,6 +32,8 @@ L'application a été développée en suivant une approche incrémentale et orie
 
 5. **Steel Thread** :  
    - Une approche progressive où chaque intégration clé (API, base de données, sécurité) est mise en place pour fournir un produit fonctionnel dès les premières étapes.  
+
+---
 
 
 ### **Endpoints principaux**  
@@ -148,6 +155,8 @@ Voici en détails comment réagir avec l'API:
   - `404 NOT FOUND` : La Cash Card n'existe pas ou n'appartient pas à l'utilisateur connecté.  
 
 - **Body** : None  
+
+---
 
 
 ### **Comment commencer ?**  
