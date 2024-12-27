@@ -90,7 +90,11 @@ Voici en détails comment réagir avec l'API:
 
 ##### **Request**  
 - **URI** : `/cashcards`  
-- **HTTP Verb** : `GET`  
+- **HTTP Verb** : `GET`
+- **Parameters** :
+  `page` : Numéro de la page (par défaut : 0).
+  `size` : Taille de la page (par défaut : 20).
+  `sort` : Propriété pour trier (par défaut : amount,asc).  
 - **Body** : Aucun
 
 ##### **Response**  
