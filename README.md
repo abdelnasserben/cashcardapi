@@ -1,14 +1,14 @@
 
-# Application **Cash Card** avec Spring Boot  
+## Application **Cash Card**  
 
 Bienvenue dans le projet **Cash Card**, une solution pour simplifier la gestion des allocations familiales. Cette application utilise **Spring Boot** pour offrir une API RESTful sécurisée et performante, avec une conception robuste et des fonctionnalités bien pensées.  
 
-## **Présentation**  
+### **Présentation**  
 Le **Cash Card** permet aux parents de gérer facilement les fonds destinés à leurs enfants, en remplaçant l'argent liquide par des "cash cards" virtuelles. Ces cartes fonctionnent de manière similaire à des cartes cadeaux et permettent de :  
 - Envoyer, recevoir et suivre les fonds alloués.  
 - Contrôler les transactions à tout moment.  
 
-### **Architecture et conception**  
+#### **Architecture et conception**  
 L'application a été développée en suivant une approche incrémentale et orientée projet :  
 
 1. **API RESTful** :  
@@ -29,7 +29,7 @@ L'application a été développée en suivant une approche incrémentale et orie
    - Une approche progressive où chaque intégration clé (API, base de données, sécurité) est mise en place pour fournir un produit fonctionnel dès les premières étapes.  
 
 
-## **Endpoints principaux**  
+### **Endpoints principaux**  
 Voici les endpoints disponibles pour interagir avec l'application :  
 
 | Méthode | Endpoint               | Description                           | Authentification requise |  
@@ -42,24 +42,18 @@ Voici les endpoints disponibles pour interagir avec l'application :
 
 ---
 
-## **Avantages de la conception**  
-- **Évolutivité** : La structure de l'application permet d'ajouter facilement de nouvelles fonctionnalités.  
-- **Simplicité** : Un design clair et concis, optimisé pour une expérience utilisateur agréable.  
-- **Sécurité renforcée** : Chaque endpoint est protégé pour éviter les accès non autorisés.  
-- **Tests robustes** : Une méthodologie Test-First garantit un code de qualité et sans régressions.  
 
-
-## **Contrats de l'API**
+### **Contrats de l'API**
 Voici en détails comment réagir avec l'API:
 
-### **1. Récupérer une Cash Card par ID**
+#### **1. Récupérer une Cash Card par ID**
 
-#### **Request**  
+##### **Request**  
 - **URI** : `/cashcards/{requestedId}`  
 - **HTTP Verb** : `GET`  
 - **Body** : Aucun 
 
-#### **Response**  
+##### **Response**  
 - **HTTP Status** :  
   - `200 OK` : La Cash Card a été trouvée et appartient à `sarah1`.  
   - `404 NOT FOUND` : La Cash Card n'existe pas ou n'appartient pas à `sarah1`.  
@@ -74,9 +68,9 @@ Voici en détails comment réagir avec l'API:
   }
   ```
 
-### **2. Créer une Cash Card**
+#### **2. Créer une Cash Card**
 
-#### **Request**  
+##### **Request**  
 - **URI** : `/cashcards`  
 - **HTTP Verb** : `POST`  
 - **Body** :  
@@ -85,21 +79,21 @@ Voici en détails comment réagir avec l'API:
     "amount": 100.00
   }
   ```
-#### **Response**  
+##### **Response**  
 - **HTTP Status** :  
   - `201 CREATED` : La Cash Card a été créée avec succès.
 - **Headers** :  
   - `Location` : L'URI de la nouvelle Cash Card, permettant au client d'accéder à la Cash Card créée.
 - **Body** : Aucun.
 
-### **Récupérer toutes les Cash Cards**
+#### **Récupérer toutes les Cash Cards**
 
-#### **Request**  
+##### **Request**  
 - **URI** : `/cashcards`  
 - **HTTP Verb** : `GET`  
 - **Body** : Aucun
 
-#### **Response**  
+##### **Response**  
 - **HTTP Status** :  
   - `200 OK` : La liste des Cash Cards a été récupérée avec succès.
 
@@ -120,9 +114,9 @@ Voici en détails comment réagir avec l'API:
   ]
   ```
 
-### **Mettre à jour une Cash Card par ID**
+#### **Mettre à jour une Cash Card par ID**
 
-#### **Request**  
+##### **Request**  
 - **URI** : `/cashcards/{requestedId}`  
 - **HTTP Verb** : `PUT`  
 - **Body** :  
@@ -131,20 +125,20 @@ Voici en détails comment réagir avec l'API:
     "amount": 150.00
   }
   ```
-#### **Response**  
+##### **Response**  
 - **HTTP Status** :  
   - `204 NO CONTENT` : La Cash Card a été mise à jour avec succès.
   - `404 NOT FOUND` : La Cash Card n'existe pas ou n'appartient pas à l'utilisateur connecté.
 - **Body** : Aucun.
 
-### **Supprimer une Cash Card par ID**
+#### **Supprimer une Cash Card par ID**
 
-#### **Request**  
+##### **Request**  
 - **URI** : `/cashcards/{id}`  
 - **HTTP Verb** : `DELETE`  
 - **Body** : None
 
-#### **Response**  
+##### **Response**  
 - **HTTP Status** :  
   - `204 NO CONTENT` : La Cash Card a été supprimée avec succès.  
   - `404 NOT FOUND` : La Cash Card n'existe pas ou n'appartient pas à l'utilisateur connecté.  
@@ -152,7 +146,7 @@ Voici en détails comment réagir avec l'API:
 - **Body** : None  
 
 
-## **Comment commencer ?**  
+### **Comment commencer ?**  
 1. Clonez ce dépôt :  
    ```bash
    git clone https://github.com/abdelnasserben/cashcardapi.git
